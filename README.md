@@ -1,1 +1,1 @@
-# React-proyect
+# React-project
