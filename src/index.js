@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from './components/header/header';
+import Home from './views/home/home';
 import './index.css';
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+ReactDOM.render(<Home />, document.getElementById('root'));
