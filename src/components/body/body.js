@@ -2,7 +2,19 @@ import React from 'react';
 
 class Body extends React.Component {
 	render() {
-		return <div>hola</div>;
+		return (
+			<ul>
+				{this.props.cards.map((card) => {
+					return (
+						<li key={card.id}>
+							<p>
+								{card.nombre} {card.apellido}
+							</p>
+						</li>
+					);
+				})}
+			</ul>
+		);
 	}
 }
 
