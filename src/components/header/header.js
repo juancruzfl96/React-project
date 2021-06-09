@@ -8,16 +8,20 @@ import headerMarvel from '../img/headerMarvel.png';
 import './header.css';
 
 class Header extends React.Component {
+	handleChange = (e) => {
+		console.log({ value: e.target.value });
+	};
+
 	render() {
 		return (
 			<div className='main'>
 				<div className='leftSection'>
-					<a href='#'>
-						<img src={headerMarvel} alt='marvel' />
+					<a href='/'>
+						<img src={headerMarvel} alt='Logo Marvel' />
 					</a>
 					<div className='search'>
 						<FontAwesomeIcon icon={faSearch} className='iconSearch' />
-						<input placeholder='Buscar'></input>
+						<input placeholder='Buscar' onChange={this.handleChange}></input>
 					</div>
 				</div>
 				<a href='#' className='favorite'>
