@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -16,17 +17,17 @@ class Header extends React.Component {
 		return (
 			<div className='main'>
 				<div className='leftSection'>
-					<a href='/'>
+					<Link to='/home'>
 						<img src={headerMarvel} alt='Logo Marvel' />
-					</a>
+					</Link>
 					<div className='search'>
 						<FontAwesomeIcon icon={faSearch} className='iconSearch' />
 						<input placeholder='Buscar' onChange={this.handleChange}></input>
 					</div>
 				</div>
-				<a href='#' className='favorite'>
+				<Link to='/home/favorite' className='favorite'>
 					<FontAwesomeIcon icon={faStar} className='iconStar' />
-				</a>
+				</Link>
 			</div>
 		);
 	}
