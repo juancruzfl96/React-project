@@ -2,6 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 20px 20px;
+	align-items: center;
 }
 
 .leftSection {
@@ -9,9 +10,14 @@
 	align-items: center;
 }
 
-.leftSection a img {
-	height: 30px;
-	width: 100px;
+.leftSection a {
+	display: flex;
+	align-items: center;
+}
+
+.leftSection img {
+	height: 40px;
+	width: 120px;
 	margin-right: 20px;
 }
 
