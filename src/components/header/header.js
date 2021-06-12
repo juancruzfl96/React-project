@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +8,8 @@ import headerMarvel from '../img/headerMarvel.png';
 import './header.css';
 
 class Header extends React.Component {
+	
+
 	handleChange = (e) => {
 		console.log({ value: e.target.value });
 	};
@@ -25,7 +26,7 @@ class Header extends React.Component {
 						<input placeholder='Buscar' onChange={this.handleChange}></input>
 					</div>
 				</div>
-				<Link to='/home/favorite' className='favorite'>
+				<Link to='/favorite' className='favorite'>
 					<FontAwesomeIcon icon={faStar} className='iconStar' />
 				</Link>
 			</div>

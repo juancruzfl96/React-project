@@ -5,7 +5,16 @@
 	margin-bottom: 20px;
 }
 
+.linkCharacter{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	
+}
+
 .name{
 	font-size: 150%;
 	margin-top: 10px;
+	color: black;
 }

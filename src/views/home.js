@@ -9,12 +9,11 @@ function Home() {
 
 	useEffect(() => {
 		axios
-			.get(
+			.get( 				
 				'https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=12166a8248b0ded7a660f83210613e0f&hash=349e7675d087b2575586f503a427eabb'
 			)
 			.then((res) => {
 				setCharacters(res.data.data.results);
-				console.log(res.data.data.results);
 			})
 			.catch((error) => console.log(error));
 	}, []);
