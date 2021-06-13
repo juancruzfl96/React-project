@@ -1,61 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
+import ModalCards from '../components/modal';
+import Card from '../components/card';
 import './style.css';
-import Header from '../components/header/header';
-import Body from '../components/body/body';
 
-class Home extends React.Component {
-	state = {
-		data: [
-			{
-				nombre: 'juan cruz',
-				apellido: 'fernandez',
-				edad: 25,
-				id: 6,
-			},
-			{
-				nombre: 'jorge',
-				apellido: 'fernandez',
-				edad: 27,
-				id: 5,
-			},
-			{
-				nombre: 'benjamin',
-				apellido: 'kugler',
-				edad: 25,
-				id: 4,
-			},
-			{
-				nombre: 'martin',
-				apellido: 'mendez',
-				edad: 24,
-				id: 3,
-			},
-			{
-				nombre: 'agustin',
-				apellido: 'gomez',
-				edad: 26,
-				id: 2,
-			},
-			{
-				nombre: 'tito',
-				apellido: 'iglesia',
-				edad: 23,
-				id: 1,
-			},
-		],
-	};
+function Home() {
+	const [character, setCharacter] = useState(null)
+	const [open, setOpen] = useState(false);
+	const [characters, setCharacters] = useState([]);
 
-	render() {
-		return (
-			<div>
-				<Header />
-				<div className='body'>
-					<Body cards={this.state.data} />
-				</div>
-			</div>
-		);
+	useEffect(() => {
+		axios
+			.get( 				
+				'https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=12166a8248b0ded7a660f83210613e0f&hash=349e7675d087b2575586f503a427eabb'
+			)
+			.then((res) => {
+				setCharacters(res.data.data.results);
+			})
+			.catch((error) => console.log(error));
+	}, []);
+
+  const handleModal = (character) => {
+		setCharacter(character)
+		setOpen(!open)
 	}
+
+	return (
+		<div className='home'>
+			{open && <ModalCards open={open} onClose={handleModal} character={character}/>}
+			{characters.map((character) => (
+				<Card key={character.id} character={character} onClick={handleModal}/>
+			))}
+		</div>
+	);
 }
 
 export default Home;
