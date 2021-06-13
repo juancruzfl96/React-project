@@ -5,6 +5,7 @@ import Favorite from '../views/favorite';
 import Home from '../views/home';
 import Layout from '../components/layout';
 import Character from '../views/character';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 	return (

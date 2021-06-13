@@ -1,17 +1,17 @@
 import './style.css';
-import { Link } from 'react-router-dom';
+import {Button} from 'reactstrap';
 
+const Card = ({ character, onClick }) => {
 
-const Card = ({ character }) => {
 	return (
 		<div  className="card">
-			<Link to='/character' className="linkCharacter">
+			<Button outline color="none" onClick={() => onClick(character)} className="buttonCharacter">
 				<img
 					src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
 					className='cardImg' height='350px' width='300px'
 				/>
 				<p className="name">{character.name}</p>
-			</Link>
+			</Button>
 		</div>
 	);
 };
