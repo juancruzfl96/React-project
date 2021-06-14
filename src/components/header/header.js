@@ -7,23 +7,22 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import headerMarvel from '../img/headerMarvel.png';
 import './header.css';
 
-class Header extends React.Component {
-	
 
-	handleChange = (e) => {
+const Header = () => {
+	
+const	handleChange = (e) => {
 		console.log({ value: e.target.value });
 	};
 
-	render() {
 		return (
 			<div className='main'>
 				<div className='leftSection'>
-					<Link to='/home'>
+					<Link to='/'>
 						<img src={headerMarvel} alt='Logo Marvel' />
 					</Link>
 					<div className='search'>
 						<FontAwesomeIcon icon={faSearch} className='iconSearch' />
-						<input placeholder='Buscar' onChange={this.handleChange}></input>
+						<input placeholder='Buscar' onChange={handleChange}></input>
 					</div>
 				</div>
 				<Link to='/favorite' className='favorite'>
@@ -31,7 +30,7 @@ class Header extends React.Component {
 				</Link>
 			</div>
 		);
-	}
+
 }
 
 export default Header;
