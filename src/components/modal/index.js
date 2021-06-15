@@ -1,8 +1,8 @@
 import React from 'react';
-import {Modal, ModalHeader, ModalBody, ModalFooter, Button} from 'reactstrap';
+import {Modal, ModalHeader, ModalBody} from 'reactstrap';
 
 
-import Home from '../../views/home'
+//import Home from '../../views/home'
 
 const ModalCards = ({open, onClose, character}) => {
 
