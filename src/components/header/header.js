@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -8,11 +8,15 @@ import headerMarvel from '../img/headerMarvel.png';
 import './header.css';
 
 
-const Header = () => {
+function Header ({onChange}){
 	
-const	handleChange = (e) => {
-		console.log({ value: e.target.value });
-	};
+const [name, setName] = useState('');
+
+const handleInputChange = (event) => {
+	
+	setName(event.target.value)
+	onChange(name)
+}
 
 		return (
 			<div className='main'>
@@ -22,7 +26,7 @@ const	handleChange = (e) => {
 					</Link>
 					<div className='search'>
 						<FontAwesomeIcon icon={faSearch} className='iconSearch' />
-						<input placeholder='Buscar' onChange={handleChange}></input>
+						<input placeholder='Buscar' value={name} onChange={handleInputChange}/>
 					</div>
 				</div>
 				<Link to='/favorite' className='favorite'>
@@ -30,7 +34,6 @@ const	handleChange = (e) => {
 				</Link>
 			</div>
 		);
-
 }
 
 export default Header;
