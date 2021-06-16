@@ -18,6 +18,6 @@ All characters are comming from Marvel Developers API.
 
 Can search by Character or Comic.
 
-Favorite Characters View.
+Favorite Characters View. - No finished
 
 Character Details View.
