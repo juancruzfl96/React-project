@@ -1,8 +1,16 @@
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+}
+
 .close{
   border: none;
   font-size: 30px;
   background-color: white;
   color: rgb(119, 118, 118);
+  width: 0;
+  margin-right: 50px;
+  padding: 5px;
 }
 
 .close:hover{
