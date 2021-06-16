@@ -1,0 +1,14 @@
+.close{
+  border: none;
+  font-size: 30px;
+  background-color: white;
+  color: rgb(119, 118, 118);
+}
+
+.close:hover{
+  color: black;
+}
+
+.bodyModal{
+  width: 70%;
+}
