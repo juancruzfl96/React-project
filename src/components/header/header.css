@@ -1,24 +1,26 @@
 .main {
 	display: flex;
-	justify-content: space-between;
 	padding: 20px 20px;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .leftSection {
 	display: flex;
 	align-items: center;
+	justify-content: left;
 }
 
 .leftSection a {
 	display: flex;
 	align-items: center;
+	width: 120px;
+	margin-right: 10px;
+	
 }
 
 .leftSection img {
 	height: 40px;
-	width: 120px;
-	margin-right: 20px;
 }
 
 .search {
@@ -40,16 +42,23 @@ input {
 	border: none;
 	outline: none;
 	font-size: 18px;
-	color: lightgray;
+	color: black;
+	width: 60%;
 }
 
 .favorite {
+	display: flex;
+	justify-content: flex-end;
+	width: 0;
 	margin-right: 30px;
 }
 
 .iconStar {
 	color: lightgray;
 	font-size: 20px;
+	display: flex;
+	justify-content: left;
+	width: 100%;
 }
 
 .iconStar:hover {

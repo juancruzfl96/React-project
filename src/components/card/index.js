@@ -5,12 +5,12 @@ const Card = ({ character, onClick }) => {
 
 	return (
 		<div  className="card">
-			<Button outline color="none" onClick={() => onClick(character)} className="buttonCharacter">
+			<Button  color='white' onClick={() => onClick(character)} className="buttonCharacter">
 				<img
 					src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-					className='cardImg' height='350px' width='300px'
+					className='cardImg' height='100%' width='100%'
 				/>
-				<p className="name">{character.name}</p>
+				<h3 className="name">{character.name}</h3>
 			</Button>
 		</div>
 	);

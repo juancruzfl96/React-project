@@ -4,9 +4,14 @@ import './style.css';
 import Header from '../components/header/header';
 class Favorite extends React.Component {
 	render() {
-		return <div className='body'>
+		return <div>
 			<Header/>
-			FAVORITE CHARACTERS</div>;
+			<div className='bodyFavorite'>
+				<h1 className='center'>FAVORITE CHARACTERS:</h1>
+				<h3 className='center'>Sorry!</h3>
+				<h4 className='center'>Working on this page</h4>
+			</div>
+		</div>;
 	}
 }
 
