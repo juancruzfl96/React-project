@@ -27,9 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-
   "homepage": "https://juancruzfl96.github.io/react-project/",
-
   "eslintConfig": {
     "extends": [
       "react-app",
