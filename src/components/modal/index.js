@@ -4,7 +4,6 @@ import {Modal, ModalHeader, ModalBody} from 'reactstrap';
 import './index.css'
 const ModalCards = ({open, onClose, character}) => {
 
-console.log(character)
     return(
       <Modal isOpen={open} toggle={onClose} className='bodyModal'>
         <ModalHeader toggle={onClose}>{character.name}</ModalHeader>
